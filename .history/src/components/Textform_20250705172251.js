@@ -1,0 +1,31 @@
+import React, {useState} from 'react'
+import PropTypes from 'prop-types'
+
+
+export default function Textform(props) {
+    const [text, setText] = useState("Welcome to my Text Editor");
+    function handleUpClick(){
+
+    }
+
+    function handleLowClick(){
+
+    }
+    <form className='container my-3'>       
+        
+        <div className="form-group">
+            <label htmlForfor="exampleFormControlTextarea1">{props.heading}</label>
+            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={text} placeholder='Text Area'></textarea>
+            
+        </div>
+    </form>
+  
+}
+
+Textform.propTypesropTypes = {
+    heading: PropTypes.string
+}
+
+Textform.defaultProps = {
+    heading: "Enter Text Here"
+}
