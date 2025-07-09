@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router,Routes,Route,Link } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route, } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
@@ -55,11 +55,12 @@ function App() {
     <Router>
       <Navbar
         title="Editor"
-        
+        aboutText="About"
         mode={mode}
         toggleMode={toggleMode}
       />
-      
+      <Textform heading="Enter Text Here" />
+      <About />
       <div>
         <Routes>
           <Route exact path="/" element={<Textform heading="Enter Text Here" />} />

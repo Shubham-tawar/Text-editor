@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router,Routes,Route,Link } from 'react-router-dom';
+import { BrowserRouter as Router,Switch, Routes,Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
@@ -53,18 +53,11 @@ function App() {
   return (
     <>
     <Router>
-      <Navbar
-        title="Editor"
-        
-        mode={mode}
-        toggleMode={toggleMode}
-      />
-      
       <div>
         <Routes>
-          <Route exact path="/" element={<Textform heading="Enter Text Here" />} />
-          <Route exact path="/about" element={<About />} />
-          
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>

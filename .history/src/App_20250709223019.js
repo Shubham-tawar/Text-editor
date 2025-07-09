@@ -55,7 +55,7 @@ function App() {
     <Router>
       <Navbar
         title="Editor"
-        
+        aboutText="About"
         mode={mode}
         toggleMode={toggleMode}
       />
