@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 
 export default function Textform(props) {
-    const [text, setText] = useState("");
+    const [text, setText] = useState("Welcome to Text Editor");
 
     function handleUpClick(){
         console.log("Uppercase was clicked");
@@ -75,27 +75,24 @@ export default function Textform(props) {
         <form className='container my-3'>       
             
             <div className="form-group">
-                <h1 className='mb-4'>{props.heading}</h1>
-                <textarea className="form-control" id="textBox" onChange={handleOnChange} rows="8" value={text} placeholder='Enter Your Text Here'></textarea>
+                <h1>{props.heading}</h1>
+                <textarea className="form-control" id="textBox" onChange={handleOnChange} rows="8" value={text} placeholder='Text Area'></textarea>
             </div>
             <button type='button' className="btn btn-primary m-3" onClick={handleUpClick}>UPPERCASE</button>
             <button type='button' className="btn btn-danger m-3" onClick={handleLowClick}>lowecase</button>
             <button type='button' className="btn btn-success m-3" onClick={handleSnakeClick}>snake_click</button>
             <button type='button' className="btn btn-warning m-3" onClick={handleKebabClick}>kebab-click</button>
             <button type='button' className="btn btn-light m-3" onClick={handleCamelClick}>camelCase</button>
-            <button type='button' className="btn btn-secondary m-3" onClick={handleExtraSpaces}>Remove Spaces</button>
+            <button type='button' className="btn btn-secondary m-3" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
             <button type='button' className="btn btn-primary m-3" onClick={handleCopy}>Copy Text</button>
         </form>
         <div className="container">
             <div className='d-flex flex-row justify-content-between'>
-                <div className='d-flex flex-column'>
-                    <h2>Your Text Summary</h2>
-                    <p><b>{wordlen()}</b> words and <b>{text.length}</b> characters</p>
-                </div>
-                <div className='d-flex flex-column'>
-                    <h4>Time to Read</h4>
-                    <p>{0.008* wordlen()} Minutes</p>
-                </div>
+                
+                <h2>Your Text Summary</h2>
+                <p><b>{wordlen()}</b> words and <b>{text.length}</b> characters</p>
+                <h4>Time to Read</h4>
+                <p>{0.008* wordlen()} Minutes</p>
             </div>
             <h4>Preview</h4>
             <p>{text.length > 0 ? text : "Enter something in the text area to preview it here"}</p>
@@ -111,5 +108,5 @@ Textform.propTypes = {
 }
 
 Textform.defaultProps = {
-    heading: ""
+    heading: "Enter Text Here"
 }

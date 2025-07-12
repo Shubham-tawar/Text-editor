@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 
 export default function Textform(props) {
-    const [text, setText] = useState("");
+    const [text, setText] = useState("Welcome to Text Editor");
 
     function handleUpClick(){
         console.log("Uppercase was clicked");
@@ -75,8 +75,8 @@ export default function Textform(props) {
         <form className='container my-3'>       
             
             <div className="form-group">
-                <h1 className='mb-4'>{props.heading}</h1>
-                <textarea className="form-control" id="textBox" onChange={handleOnChange} rows="8" value={text} placeholder='Enter Your Text Here'></textarea>
+                <h1>{props.heading}</h1>
+                <textarea className="form-control" id="textBox" onChange={handleOnChange} rows="8" value={text} placeholder='Text Area'></textarea>
             </div>
             <button type='button' className="btn btn-primary m-3" onClick={handleUpClick}>UPPERCASE</button>
             <button type='button' className="btn btn-danger m-3" onClick={handleLowClick}>lowecase</button>
@@ -111,5 +111,5 @@ Textform.propTypes = {
 }
 
 Textform.defaultProps = {
-    heading: ""
+    heading: "Test Editor- Lowercase"
 }

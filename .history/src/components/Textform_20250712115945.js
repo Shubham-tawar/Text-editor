@@ -75,8 +75,8 @@ export default function Textform(props) {
         <form className='container my-3'>       
             
             <div className="form-group">
-                <h1 className='mb-4'>{props.heading}</h1>
-                <textarea className="form-control" id="textBox" onChange={handleOnChange} rows="8" value={text} placeholder='Enter Your Text Here'></textarea>
+                <h1>{props.heading}</h1>
+                <textarea className="form-control" id="textBox" onChange={handleOnChange} rows="8" value={text} placeholder='Text Area'></textarea>
             </div>
             <button type='button' className="btn btn-primary m-3" onClick={handleUpClick}>UPPERCASE</button>
             <button type='button' className="btn btn-danger m-3" onClick={handleLowClick}>lowecase</button>

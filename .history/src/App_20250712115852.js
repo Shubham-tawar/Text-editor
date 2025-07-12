@@ -62,7 +62,7 @@ function App() {
       
       <div>
         <Routes>
-          <Route exact path="/" element={<Textform heading="Text Editor - Lowercase | Uppercase | CamelCase | Kebab-case | Snake_case | Remove Extra Space" />} />
+          <Route exact path="/" element={<Textform heading="Test Editor - Lowercase | Uppercase | CamelCase | Kebab-case | Snake_case" />} />
           <Route exact path="/about" element={<About />} />
           
         </Routes>
